@@ -1,0 +1,73 @@
+/* VARS 
+-------------------------------------------------------------- */
+$main_width:      1200px;
+$body_pad:      20px;
+
+$bp_lg:           1400px;
+$bp_med:          1080px;
+$bp_sm:           600px;
+
+/*  COLORS  */
+$color_main:         #000;                 
+$color_accent:       #666;              
+$color_lt:     	 	#ccc;
+$color_error:        #b54747;
+$color_warning:      #f0da72;
+
+$page_bg:            #fff;
+
+
+/*  TYPOGROPHY */
+$font_main:         'Muli', sans-serif;
+$font_header:       'Muli', sans-serif;
+
+
+/*  TRANSITIONS  */
+$trans:             .3s;
+$default-transition-property : all;
+$default-transition-duration : .3s;
+$default-transition-function : false;
+$default-transition-delay    : false;
+
+
+/* MIX-INS 
+-------------------------------------------------------------- */
+@mixin bp($point) {
+  @if $point == l {
+    @media (max-width: $bp_lg) { @content; }
+  }
+  @else if $point == m {
+    @media (max-width: $bp_med) { @content; }
+  }
+  @else if $point == s {
+    @media (max-width: $bp_sm)  { @content; }
+  }
+}
+
+
+
+/* PLACEHOLDERS & EXTENDS
+-------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

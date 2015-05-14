@@ -1,0 +1,170 @@
+@import "compass";
+@import "_reset";
+@import "_fonts";
+@import "_icons";
+@import "_base";
+@import "minimalect.scss";
+
+/* BASIC STYLES
+-------------------------------------------------------------- */
+*{
+  @include box-sizing('border-box');
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+body{
+  font: 16px/1.5 $font_main;
+  background-color: $page_bg;  
+  color: $color_main;
+}
+
+a{
+  @include transition;
+  color: $color_accent;
+  text-decoration: none;
+  
+  &:hover{
+    color: $color_main;
+  }
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+h2{
+  font-size: 20px;
+}
+
+
+/* Other elements
+-------------------------------------------------------------- */
+#wrap{
+  padding: 80px;
+
+  @include bp(s){
+    padding: 10px;
+  }
+}
+
+#logo{
+  text-align: center;
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2{
+    margin-top: 20px;
+  }
+}
+
+
+
+/* FORM
+-------------------------------------------------------------- */
+form{
+  max-width: 600px;
+  margin: auto;
+
+  .left,
+  .right{
+    width: 50%;
+    float: left;
+  }
+
+  .right{
+    padding-left: 10px;
+  }
+
+  .left{
+    padding-right: 10px;
+  }
+
+  @include bp(s){
+
+    .left,
+    .right{
+      width: 100%;
+      float: none;
+      padding: 0 !important;
+    }
+
+    .left{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+label{
+  font-size: .8em;
+  display: block;
+}
+
+input[type='text'],
+input[type='url'],
+input[type='email'],
+textarea{
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  padding: 10px;
+  font-family: $font_main;
+  color: $color_main;
+  border: #ccc solid 1px;
+
+  &:focus{
+    background-color: #f1f1f1;
+  }
+}
+
+textarea{
+  height: 215px;
+
+  @include bp(s){
+    width: 100%;
+  }
+}
+
+select{
+  width: 100%;
+}
+
+.form-item{
+  margin-bottom: 20px;
+}
+
+.actions{
+  text-align: center;
+}
+
+input[type='submit']{
+  @include transition;
+  width: 100%;
+  font-family: $font_main;
+  background: none;
+  border: $color_main solid 1px;
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $color_main;
+  padding: 10px 30px;
+
+  &:hover{
+    background-color: transparent;
+    color: $color_main;
+  }
+}
+
+
+
+
