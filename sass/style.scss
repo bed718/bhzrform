@@ -64,6 +64,7 @@ h2{
 
   h2{
     margin-top: 20px;
+    font-style: italic;
   }
 }
 
@@ -72,8 +73,10 @@ h2{
 /* FORM
 -------------------------------------------------------------- */
 form{
+  @include pie-clearfix;
   max-width: 600px;
   margin: auto;
+  position: relative;
 
   .left,
   .right{
@@ -81,12 +84,10 @@ form{
     float: left;
   }
 
-  .right{
-    padding-left: 10px;
-  }
+
 
   .left{
-    padding-right: 10px;
+    padding-right: 20px;
   }
 
   @include bp(s){
@@ -121,9 +122,6 @@ textarea{
   color: $color_main;
   border: #ccc solid 1px;
 
-  &:focus{
-    background-color: #f1f1f1;
-  }
 }
 
 textarea{
@@ -138,17 +136,21 @@ select{
   width: 100%;
 }
 
-.form-item{
-  margin-bottom: 20px;
+.form-item + .form-item{
+  margin-top: 20px;
 }
 
 .actions{
   text-align: center;
+ // position: relative;
 }
 
 input[type='submit']{
   @include transition;
-  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
   font-family: $font_main;
   background: none;
   border: $color_main solid 1px;
@@ -162,6 +164,15 @@ input[type='submit']{
   &:hover{
     background-color: transparent;
     color: $color_main;
+  }
+
+  @include bp(s){
+    position: relative;
+    width: 100%;
+    right: auto;
+    bottom: auto;
+    margin-top: 20px;
+
   }
 }
 

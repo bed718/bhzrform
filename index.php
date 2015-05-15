@@ -12,7 +12,7 @@
 		<div id="wrap">
 			 <div id="logo">
 			 	<img src="/images/TZR-logo.jpg" alt="The Zoe Report logo" />
-			 	<h2>shopping experience powered by bringhub</h2>
+			 	<h2>shopping experience powered by BringHub</h2>
 			 </div> <!-- END #logo -->
 
 			 <h1>Contact Us</h1>

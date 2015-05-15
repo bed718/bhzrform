@@ -412,7 +412,7 @@ a.service-links-google-plus:before {
   position: relative;
   width: 100%;
   cursor: pointer;
-  font-family: "Muli", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -494,7 +494,7 @@ a.service-links-google-plus:before {
 }
 /* line 137, ../sass/minimalect.scss */
 .minict_wrapper ul li {
-  font-family: "Muli", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   list-style: none;
   font-size: 1rem;
   padding: 0 10px;
@@ -673,7 +673,7 @@ a.service-links-google-plus:before {
 
 /* line 19, ../sass/style.scss */
 body {
-  font: 16px/1.5 "Muli", sans-serif;
+  font: 16px/1.5 "Century Gothic", sans-serif;
   background-color: #fff;
   color: #000;
 }
@@ -730,50 +730,55 @@ h2 {
 /* line 65, ../sass/style.scss */
 #logo h2 {
   margin-top: 20px;
+  font-style: italic;
 }
 
 /* FORM
 -------------------------------------------------------------- */
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 form {
+  *zoom: 1;
   max-width: 600px;
   margin: auto;
+  position: relative;
 }
-/* line 78, ../sass/style.scss */
+/* line 38, ../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 81, ../sass/style.scss */
 form .left,
 form .right {
   width: 50%;
   float: left;
 }
-/* line 84, ../sass/style.scss */
-form .right {
-  padding-left: 10px;
-}
-/* line 88, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 form .left {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 @media (max-width: 600px) {
-  /* line 94, ../sass/style.scss */
+  /* line 95, ../sass/style.scss */
   form .left,
   form .right {
     width: 100%;
     float: none;
     padding: 0 !important;
   }
-  /* line 101, ../sass/style.scss */
+  /* line 102, ../sass/style.scss */
   form .left {
     margin-bottom: 20px;
   }
 }
 
-/* line 107, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 label {
   font-size: .8em;
   display: block;
 }
 
-/* line 112, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 input[type='text'],
 input[type='url'],
 input[type='email'],
@@ -782,52 +787,48 @@ textarea {
   border: none;
   font-size: 1em;
   padding: 10px;
-  font-family: "Muli", sans-serif;
+  font-family: "Century Gothic", sans-serif;
   color: #000;
   border: #ccc solid 1px;
 }
-/* line 124, ../sass/style.scss */
-input[type='text']:focus,
-input[type='url']:focus,
-input[type='email']:focus,
-textarea:focus {
-  background-color: #f1f1f1;
-}
 
-/* line 129, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 textarea {
   height: 215px;
 }
 @media (max-width: 600px) {
-  /* line 129, ../sass/style.scss */
+  /* line 127, ../sass/style.scss */
   textarea {
     width: 100%;
   }
 }
 
-/* line 137, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 select {
   width: 100%;
 }
 
-/* line 141, ../sass/style.scss */
-.form-item {
-  margin-bottom: 20px;
+/* line 139, ../sass/style.scss */
+.form-item + .form-item {
+  margin-top: 20px;
 }
 
-/* line 145, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .actions {
   text-align: center;
 }
 
-/* line 149, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 input[type='submit'] {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  width: 100%;
-  font-family: "Muli", sans-serif;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  font-family: "Century Gothic", sans-serif;
   background: none;
   border: #000 solid 1px;
   font-size: 1.5em;
@@ -837,8 +838,18 @@ input[type='submit'] {
   background-color: #000;
   padding: 10px 30px;
 }
-/* line 162, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 input[type='submit']:hover {
   background-color: transparent;
   color: #000;
+}
+@media (max-width: 600px) {
+  /* line 148, ../sass/style.scss */
+  input[type='submit'] {
+    position: relative;
+    width: 100%;
+    right: auto;
+    bottom: auto;
+    margin-top: 20px;
+  }
 }
